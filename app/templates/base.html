@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -10,11 +10,12 @@
     {% endif %}
     <title>News Headlines</title>
   </head>
-  <body>
-    <!-- Content Block -->
-    {% block content %}
-    
+  <body> -->
+    {% extends 'bootstrap/base.html' %}
+    <!-- Navbar Block -->
+    {% block navbar %}
+      {% include 'navbar.html' %}
     {% endblock %}
     
-  </body>
-</html>
+  <!-- </body>
+</html> -->
