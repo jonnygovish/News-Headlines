@@ -1,4 +1,4 @@
-# News-Headlines
+# News Headlines
 An web application that list and previews news articles from various sources
 
 ## Built by  [John Mutavi](https://github.com/jonnygovish)
