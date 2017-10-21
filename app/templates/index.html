@@ -1,5 +1,38 @@
 {% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 <!-- Content Block -->
 {% block content %}
-<h1>List of sources</h1>
+<h2>Sports</h2>
+<ul class="unstyled">
+  {{macro.displaySources(sport)}}    
+</ul>
+<h2>General</h2>
+<ul>
+  {{macro.displaySources(general)}}    
+</ul>
+<h2>Business</h2>
+<ul>
+  {{macro.displaySources(business)}}    
+</ul>
+<h2>Entertainment</h2>
+<ul>
+  {{macro.displaySources(entertainment)}}    
+</ul>
+<h2>Politics</h2>
+<ul>
+  {{macro.displaySources(politics)}}    
+</ul>
+<h2>Gaming</h2>
+<ul>
+  {{macro.displaySources(gaming)}}    
+</ul>
+<h2>Technology</h2>
+<ul>
+  {{macro.displaySources(technology)}}    
+</ul>
+<h2>Music</h2>
+<ul>
+  {{macro.displaySources(music)}}    
+</ul>
+
 {% endblock %}
