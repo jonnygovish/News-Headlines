@@ -1,5 +1,5 @@
 
-class News_source:
+class Source:
   """
   News_source class that defines source Objects
   """
@@ -9,3 +9,16 @@ class News_source:
     self.description = description
     self.url = url
     self.category = category
+
+
+class Articles:
+  """
+  Article class that defines the article Object
+  """
+  def __init__(self, author, title, description,url, picture, publishedAt):
+    self.author = author
+    self.title = title
+    self.description = description
+    self.url = url
+    self.picture = picture
+    self.publishedAt = publishedAt
