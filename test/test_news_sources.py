@@ -1,5 +1,5 @@
 import unittest
-from app.models import News_source
+from app.models import Source
 
 class News_sourceTest(unittest.TestCase):
   """
@@ -9,8 +9,10 @@ class News_sourceTest(unittest.TestCase):
     """
     Set up tat will run before every Test
     """
-    self.new_source =News_source("bbc-sport","BBC SPORT", "The home of BBC Sport online.","http://www.bbc.co.uk/sport","sport")
+    self.new_source =Source("bbc-sport","BBC SPORT", "The home of BBC Sport online.","http://www.bbc.co.uk/sport","sport")
 
   def test_instance(self):
-        self.assertTrue(isinstance(self.new_source,News_source))
+        self.assertTrue(isinstance(self.new_source,Source))
     
+if __name__ == '__main__':
+  unittest.main(verbosity=2)
