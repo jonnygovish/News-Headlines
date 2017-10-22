@@ -11,5 +11,6 @@ class News_sourceTest(unittest.TestCase):
     """
     self.new_source =News_source("bbc-sport","BBC SPORT", "The home of BBC Sport online.","http://www.bbc.co.uk/sport","sport")
 
-  # def test_init(self):
+  def test_instance(self):
+        self.assertTrue(isinstance(self.new_source,News_source))
     
