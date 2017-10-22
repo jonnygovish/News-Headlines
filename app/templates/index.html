@@ -2,37 +2,97 @@
 {% import 'macros.html' as macro%}
 <!-- Content Block -->
 {% block content %}
-<h2>Sports</h2>
-<ul class="unstyled">
-  {{macro.displaySources(sport)}}    
-</ul>
-<h2>General</h2>
-<ul>
-  {{macro.displaySources(general)}}    
-</ul>
-<h2>Business</h2>
-<ul>
-  {{macro.displaySources(business)}}    
-</ul>
-<h2>Entertainment</h2>
-<ul>
-  {{macro.displaySources(entertainment)}}    
-</ul>
-<h2>Politics</h2>
-<ul>
-  {{macro.displaySources(politics)}}    
-</ul>
-<h2>Gaming</h2>
-<ul>
-  {{macro.displaySources(gaming)}}    
-</ul>
-<h2>Technology</h2>
-<ul>
-  {{macro.displaySources(technology)}}    
-</ul>
-<h2>Music</h2>
-<ul>
-  {{macro.displaySources(music)}}    
-</ul>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Sports</h2>
+  </div>
+  <div class="panel-body">
+      <ul class="list-unstyled">
+          {{macro.displaySources(sport)}}    
+      </ul>
+        
+  </div>
+</div>
+
+<!-- General -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h2>General</h2>
+    </div>
+    <div class="panel-body">
+        <ul class="list-unstyled">
+            {{macro.displaySources(general)}}    
+        </ul>
+          
+    </div>
+  </div>
+
+<!-- Business -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Business</h2>  
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        {{macro.displaySources(business)}}    
+      </ul>
+    </div>
+  </div>
+<!-- Entertainment -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Entertainment</h2>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        {{macro.displaySources(entertainment)}}    
+      </ul>
+    </div>
+  </div>
+
+<!-- Politics -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Politics</h2>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        {{macro.displaySources(politics)}}    
+      </ul>
+    </div>
+  </div>
+<!-- Gaming -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Gaming</h2>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        {{macro.displaySources(gaming)}}    
+      </ul>
+    </div>
+  </div>
+<!-- Technology -->
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Technology</h2>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        {{macro.displaySources(technology)}}    
+      </ul>
+    </div>
+  </div>
+<!-- Music -->
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Music</h2>
+  </div>
+  <div class="panel-body">
+    <ul class="list-unstyled">
+      {{macro.displaySources(music)}}    
+    </ul>
+  </div>
+</div>
 
 {% endblock %}
