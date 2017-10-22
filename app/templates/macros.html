@@ -1,22 +1,31 @@
 {% macro displaySources(source_list)%}
   {% for source in source_list %}
-  <li>
-    <a href="/source/{{source.id}}">{{source.name}}</a>
-     
-  </li>
+  <div class="col-md-6">
+    <li>
+      <a href="/source/{{source.id}}">{{source.name}}</a>
+       
+    </li>
+  </div>
   {% endfor %}
 {% endmacro %}
 
 {% macro displayArticles(article_list) %}
   {% for article in article_list %}
-  <div>
-    <li class="text-center">
-      <h3>{{article.title}} </h3>
-      <img src="{{article.picture}}" alt="{{article.title}}" class="img-responsive">
-
-      <p>{{article.description}}</p>
-      <small>{{article.publishedAt}}</small>
-    </li>
-  </div>
+  <li>
+    <div class = " col-md-6 article-card"style="width: 250px;
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   ">
+       <h3> <a href="{{article.url}} ">{{article.title}}</a></h3>
+       <img src="{{article.picture}}" alt="{{article.title}}" class="img-responsive">
+         <!-- <li class="text-center"> -->
+           <p>{{article.description|  truncate (20)}}</p>
+           <p><small>{{article.publishedAt}}</small></p> 
+         
+     </div>
+   <br>
+  </li>
   {% endfor %}
 {% endmacro%}
+
+
+
