@@ -11,19 +11,23 @@
 
 {% macro displayArticles(article_list) %}
   {% for article in article_list %}
-  <li>
-    <div class = "col-md-6 article-card"style="width: 250px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-   ">
-       <h3> <a href="{{article.url}} ">{{article.title}}</a></h3>
-       <img src="{{article.picture}}" alt="{{article.title}}" class="img-responsive">
-         <!-- <li class="text-center"> -->
-           <p>{{article.description|  truncate (20)}}</p>
-           <p><small>{{article.publishedAt}}</small></p> 
-         
-     </div>
-   <br>
-  </li>
+  
+  <div class="">
+  <div class = " article-card" style="width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.61), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+      <li class="text-center">
+        
+          <img src="{{article.picture}}" alt="{{article.title}}" class="img-responsive text-center" style="width: 100%; display:inline-block;" >
+          <h3> <a href="{{article.url}} ">{{article.title}}</a></h3>
+          
+              <p>{{article.description|  truncate (200)}}<a href="{{article.url}} ">read more</a></p>
+              <p><small>published at: {{article.publishedAt}}</small></p> 
+        </li>
+    </div>
+  </div>
+    <br>
+    
   {% endfor %}
 {% endmacro%}
 

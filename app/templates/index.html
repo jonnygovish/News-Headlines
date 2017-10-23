@@ -1,11 +1,27 @@
 {% extends 'base.html'%}
 {% import 'macros.html' as macro%}
+
+{% block styles %}
+
+    {{ super() }}
+    <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+{% endblock %}
+
 <!-- Content Block -->
 {% block content %}
+<style>
+  body{
+    background: #878787;
+    box-shadow:  0 0 10px #000;
+  }
+</style>
 <div class="container">
-
+  <h1 class="header text-center" style="color:white;" >NEWS HEADLINES</h1>
+  <hr>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h2>Sports</h2>
@@ -18,7 +34,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
       <!-- General -->
       <div class="panel panel-primary">
           <div class="panel-heading">
@@ -32,92 +48,154 @@
           </div>
         </div>  
       </div>
-    <div class="col-md-4">
-      <!-- Business -->
-      <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h2>Business</h2>  
-          </div>
-          <div class="panel-body">
-            <ul class="list-unstyled">
-              {{macro.displaySources(business)}}    
-            </ul>
+  </div>
+      <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Business -->
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2>Business</h2>  
+            </div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                {{macro.displaySources(business)}}    
+              </ul>
+            </div>
           </div>
         </div>
+        
+        <div class="col-md-6">
+          <!-- Entertainment -->
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h2>Entertainment</h2>
+            </div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                {{macro.displaySources(entertainment)}}    
+              </ul>
+            </div>
+          </div>      
+        </div>
+        
       </div>
-  </div>
-  <hr>
-  <div class="row">
+</div>
 
-    <div class="col-md-4">
-      <!-- Entertainment -->
-      <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h2>Entertainment</h2>
-          </div>
-          <div class="panel-body">
-            <ul class="list-unstyled">
-              {{macro.displaySources(entertainment)}}    
-            </ul>
-          </div>
-        </div>      
+{% endblock %}
+
+
+<div class="row">
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2>Sports</h2>
       </div>
-    <div class="col-md-4">
-      <!-- Politics -->
-      <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h2>Politics</h2>
-          </div>
-          <div class="panel-body">
-            <ul class="list-unstyled">
-              {{macro.displaySources(politics)}}    
-            </ul>
-          </div>
-        </div>
+      <div class="panel-body">
+          <ul class="unstyled">
+              {{macro.displaySources(sport)}}    
+          </ul>
+            
       </div>
-    <div class="col-md-4">
-      <!-- Gaming -->
-      <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h2>Gaming</h2>
-          </div>
-          <div class="panel-body">
-            <ul class="list-unstyled">
-              {{macro.displaySources(gaming)}}    
-            </ul>
-          </div>
-        </div>
-      </div>
+    </div>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <!-- Technology -->
-      <div class="panel panel-primary">
+  <div class="col-md-4">
+    <!-- General -->
+    <div class="panel panel-primary">
         <div class="panel-heading">
-          <h2>Technology</h2>
+            <h2>General</h2>
+        </div>
+        <div class="panel-body">
+            <ul class="list-unstyled">
+                {{macro.displaySources(general)}}    
+            </ul>
+              
+        </div>
+      </div>  
+    </div>
+  <div class="col-md-4">
+    <!-- Business -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Business</h2>  
         </div>
         <div class="panel-body">
           <ul class="list-unstyled">
-            {{macro.displaySources(technology)}}    
+            {{macro.displaySources(business)}}    
           </ul>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
-      <!-- Music -->
-      <div class="panel panel-primary">
+</div>
+<hr>
+<div class="row">
+
+  <div class="col-md-4">
+    <!-- Entertainment -->
+    <div class="panel panel-primary">
         <div class="panel-heading">
-          <h2>Music</h2>
+          <h2>Entertainment</h2>
         </div>
         <div class="panel-body">
           <ul class="list-unstyled">
-            {{macro.displaySources(music)}}    
+            {{macro.displaySources(entertainment)}}    
+          </ul>
+        </div>
+      </div>      
+    </div>
+  <div class="col-md-4">
+    <!-- Politics -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Politics</h2>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            {{macro.displaySources(politics)}}    
           </ul>
         </div>
       </div>
+    </div>
+  <div class="col-md-4">
+    <!-- Gaming -->
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Gaming</h2>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            {{macro.displaySources(gaming)}}    
+          </ul>
+        </div>
       </div>
-  </div>
+    </div>
 </div>
-
-{% endblock %}
+<hr>
+<div class="row">
+  <div class="col-md-6">
+    <!-- Technology -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Technology</h2>
+      </div>
+      <div class="panel-body">
+        <ul  class="list-unstyled">
+          {{macro.displaySources(technology)}}    
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <!-- Music -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Music</h2>
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          {{macro.displaySources(music)}}    
+        </ul>
+      </div>
+    </div>
+    </div>
+</div>
